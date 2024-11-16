@@ -57,6 +57,7 @@
             position: relative;
             max-width: 600px;
             margin: 40px auto;
+            overflow: hidden;
         }
         .letter {
             background: #f8e9d2;
@@ -73,20 +74,7 @@
             background-image: url('scroll_background.png'); /* Background for scroll effect */
             background-size: cover;
         }
-        .seal {
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 50px;
-            background: red;
-            border: 2px solid #8B0000;
-            border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            content: '';
-        }
-        .letter-container:hover .letter {
+        .letter.open {
             transform: perspective(800px) rotateX(0deg);
         }
         .letter p {
@@ -96,19 +84,22 @@
         .buy-button {
             display: inline-block;
             margin-top: 20px;
-            background: linear-gradient(45deg, #ff7f50, #ff4500);
-            color: white;
+            background: #6d4c41;
+            color: #fff;
             padding: 15px 30px;
             border-radius: 25px;
             text-decoration: none;
             font-size: 1.2rem;
             font-weight: bold;
+            border: 2px solid #3e2723;
             transition: transform 0.2s, background 0.3s;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            font-family: 'Georgia', serif;
+            text-transform: uppercase;
         }
         .buy-button:hover {
             transform: scale(1.1);
-            background: linear-gradient(45deg, #ff4500, #ff7f50);
+            background: #3e2723;
         }
     </style>
 </head>
@@ -125,8 +116,7 @@
     <section class="section">
         <h2>The Tale of BitPengs</h2>
         <div class="letter-container">
-            <div class="seal"></div>
-            <div class="letter">
+            <div class="letter" id="scrolling-letter">
                 <p>Once upon a time, in the icy kingdom of Frosthaven, a community of bold and resilient penguins dreamed of a future where their treasure could unite the world. These penguins were not ordinary—they were visionaries, bringing their golden coin, **BitPengs**, to the blockchain seas.</p>
                 <p>With every BitPeng minted, the penguins shared their story of resilience, teamwork, and prosperity. As the coin grew, so did the flock of believers who saw the potential of this frosty revolution.</p>
                 <p>Today, BitPengs is more than a currency—it's a movement. Join the flock and claim your piece of the frozen treasure. Together, we'll navigate the crypto currents and chart a course to financial success!</p>
@@ -138,5 +128,15 @@
     <footer>
         <p>&copy; 2024 BitPengs. All Rights Reserved.</p>
     </footer>
+    <script>
+        // JavaScript to handle scroll-triggered animation
+        const letter = document.getElementById('scrolling-letter');
+        window.addEventListener('scroll', () => {
+            const rect = letter.getBoundingClientRect();
+            if (rect.top < window.innerHeight && !letter.classList.contains('open')) {
+                letter.classList.add('open');
+            }
+        });
+    </script>
 </body>
 </html>
