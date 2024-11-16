@@ -8,7 +8,7 @@
         /* General Styles */
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Georgia', serif;
             background: linear-gradient(to bottom, #e6f7ff, #cce7f0);
             color: #333;
         }
@@ -49,30 +49,6 @@
         .cta:hover {
             background: #0056b3;
         }
-        .coin-info {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .info-box {
-            width: 300px;
-            padding: 20px;
-            border: 2px solid #007BFF;
-            border-radius: 10px;
-            background: #fff;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            background: #007BFF;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        footer p {
-            margin: 0;
-        }
         img {
             max-width: 100%;
             border-radius: 10px;
@@ -88,6 +64,31 @@
                 transform: translateY(-10px);
             }
         }
+        /* Letter Animation */
+        .letter-container {
+            position: relative;
+            max-width: 600px;
+            margin: 40px auto;
+        }
+        .letter {
+            background: #f8e9d2;
+            border: 2px solid #c2a77d;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            font-family: 'Georgia', serif;
+            font-size: 1.2rem;
+            color: #5a4633;
+            transform: perspective(800px) rotateX(90deg);
+            transform-origin: top;
+            transition: transform 0.6s ease;
+        }
+        .letter-container:hover .letter {
+            transform: perspective(800px) rotateX(0deg);
+        }
+        .letter p {
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
@@ -101,30 +102,15 @@
         <img src="banner.png" alt="BitPengs Banner" class="animate">
     </section>
     <section class="section">
-        <h2>Coin Details</h2>
-        <div class="coin-info">
-            <div class="info-box">
-                <h3>Name:</h3>
-                <p>BitPengs</p>
-            </div>
-            <div class="info-box">
-                <h3>Symbol:</h3>
-                <p>PENG</p>
-            </div>
-            <div class="info-box">
-                <h3>Total Supply:</h3>
-                <p>1B Penguins</p>
-            </div>
-            <div class="info-box">
-                <h3>Blockchain:</h3>
-                <p>Solana</p>
+        <h2>The Tale of BitPengs</h2>
+        <div class="letter-container">
+            <div class="letter">
+                <p>Once upon a time, in the icy kingdom of Frosthaven, a community of bold and resilient penguins dreamed of a future where their treasure could unite the world. These penguins were not ordinary—they were visionaries, bringing their golden coin, **BitPengs**, to the blockchain seas.</p>
+                <p>With every BitPeng minted, the penguins shared their story of resilience, teamwork, and prosperity. As the coin grew, so did the flock of believers who saw the potential of this frosty revolution.</p>
+                <p>Today, BitPengs is more than a currency—it's a movement. Join the flock and claim your piece of the frozen treasure. Together, we'll navigate the crypto currents and chart a course to financial success!</p>
+                <p><strong>Will you be part of the story?</strong></p>
             </div>
         </div>
-    </section>
-    <section class="section">
-        <h2>Join the Flock!</h2>
-        <p>Be part of the movement. Explore the icy world of BitPengs today.</p>
-        <a href="https://bitpengs.io" class="cta">Visit Our Website</a>
     </section>
     <footer>
         <p>&copy; 2024 BitPengs. All Rights Reserved.</p>
