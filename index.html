@@ -14,7 +14,7 @@
       overflow-x: hidden;
     }
 
-    /* Fundo animado */
+    /* Fundo animado com bolinhas */
     .background {
       position: fixed;
       top: 0;
@@ -29,6 +29,37 @@
     @keyframes gradient {
       0% { background-position: 0% 50%; }
       100% { background-position: 100% 50%; }
+    }
+
+    .particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      animation: move 10s infinite;
+    }
+
+    @keyframes move {
+      0% {
+        transform: translateY(0) scale(1);
+      }
+      50% {
+        transform: translateY(-50px) scale(1.5);
+      }
+      100% {
+        transform: translateY(100vh) scale(0.8);
+      }
     }
 
     /* Conteúdo principal */
@@ -49,7 +80,6 @@
       50% { transform: translateY(-20px); }
     }
 
-    /* Animação do título */
     .title {
       font-size: 4rem;
       margin: 10px 0;
@@ -100,23 +130,23 @@
     }
 
     .telegram-button {
-      font-size: 3rem; /* Tamanho do ícone */
-      color: #FFFFFF; /* Cor do ícone (avião branco) */
-      background-color: #0088cc; /* Fundo azul oficial do Telegram */
-      border-radius: 50%; /* Torna o botão circular */
+      font-size: 3rem;
+      color: #FFFFFF;
+      background-color: #0088cc;
+      border-radius: 50%;
       width: 80px;
       height: 80px;
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 auto;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona um leve sombreado */
-      transition: background-color 0.3s ease, transform 0.2s ease; /* Animações suaves */
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
     .telegram-button:hover {
-      background-color: #006699; /* Muda o azul no hover */
-      transform: scale(1.1); /* Aumenta o tamanho no hover */
+      background-color: #006699;
+      transform: scale(1.1);
     }
 
     .telegram-text {
@@ -126,31 +156,31 @@
       color: #fff;
     }
 
-    /* About Section */
+    /* About Section (Carta Antiga) */
     #about {
       text-align: center;
       margin-top: 50px;
       padding: 20px;
-      background: url('papiro.jpg') no-repeat center center; /* Fundo de papiro */
+      background: url('papiro.jpg') no-repeat center center;
       background-size: cover;
-      border: 2px solid #8b4513; /* Borda de pergaminho */
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para realçar */
-      border-radius: 10px; /* Bordas arredondadas */
+      border: 2px solid #8b4513;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
       max-width: 800px;
       margin: 50px auto;
     }
 
     #about h2 {
       font-size: 2.5rem;
-      color: #4b2e1e; /* Marrom escuro para combinar com o estilo antigo */
-      font-family: 'Cinzel', serif; /* Fonte com estilo clássico */
+      color: #4b2e1e;
+      font-family: 'Cinzel', serif;
     }
 
     #about p {
       font-size: 1.2rem;
       line-height: 1.8;
-      color: #4b2e1e; /* Marrom escuro */
-      font-family: 'Cinzel', serif; /* Estilo de escrita à mão */
+      color: #4b2e1e;
+      font-family: 'Cinzel', serif;
     }
 
     .info-section {
@@ -205,6 +235,14 @@
 <body>
   <!-- Fundo animado -->
   <div class="background"></div>
+  <div class="particles">
+    <!-- Gerar várias partículas -->
+    <div class="particle" style="left: 10%; animation-duration: 12s;"></div>
+    <div class="particle" style="left: 25%; animation-duration: 8s;"></div>
+    <div class="particle" style="left: 50%; animation-duration: 15s;"></div>
+    <div class="particle" style="left: 70%; animation-duration: 10s;"></div>
+    <div class="particle" style="left: 85%; animation-duration: 7s;"></div>
+  </div>
 
   <!-- Conteúdo principal -->
   <div class="container">
@@ -221,7 +259,7 @@
   </div>
 
   <!-- Seção About -->
-  <div id="about" class="section">
+  <div id="about">
     <h2>About Bowser Coin</h2>
     <p>
       The fiery king of memes has invaded the blockchain! Bowser Coin is the ultimate meme-based cryptocurrency powered by the unstoppable Solana network. With <strong>lightning-fast transactions</strong>, <strong>low fees</strong>, and a <strong>total supply of 1 billion coins</strong>, we’re ready to set the crypto world ablaze.
