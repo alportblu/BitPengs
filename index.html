@@ -44,22 +44,17 @@
     .door {
       width: 50%;
       height: 100%;
-      background: #4b0082;
-      background-image: url('castle-door.png');
-      background-size: cover;
-      background-position: center;
+      background-color: #222;
       transform-origin: center right;
       animation: door-open 2s forwards;
     }
 
     .door.left {
       transform-origin: center left;
-      background-color: #6a0dad; /* Fallback color if the image fails to load */
     }
 
     .door.right {
       transform-origin: center right;
-      background-color: #4b0082; /* Fallback color if the image fails to load */
     }
 
     @keyframes door-open {
@@ -128,14 +123,14 @@
   </style>
 </head>
 <body>
-  <!-- Background -->
-  <div class="background"></div>
-
   <!-- Castle Doors Animation -->
   <div class="castle-doors">
     <div class="door left"></div>
     <div class="door right"></div>
   </div>
+
+  <!-- Background -->
+  <div class="background"></div>
 
   <!-- Main Content -->
   <div class="container">
@@ -146,7 +141,7 @@
   </div>
 
   <script>
-    // Particles for background
+    // Adds interactive particles to the background
     const canvas = document.createElement('canvas');
     document.body.appendChild(canvas);
     canvas.style.position = 'fixed';
