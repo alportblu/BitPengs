@@ -9,7 +9,7 @@
       margin: 0;
       font-family: 'Arial', sans-serif;
       color: #fff;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
     .background {
@@ -18,7 +18,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: linear-gradient(120deg, #ff4500, #8b0000);
+      background: linear-gradient(120deg, #6a0dad, #4b0082);
       animation: gradient 10s infinite alternate;
       z-index: -1;
     }
@@ -36,6 +36,8 @@
     .main-image {
       width: 150px;
       animation: float 3s ease-in-out infinite;
+      mask-image: radial-gradient(circle, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+      -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
     }
 
     @keyframes float {
@@ -93,7 +95,13 @@
     .info-item {
       text-align: center;
       margin: 10px;
-      width: 300px;
+      width: 200px;
+      animation: bounce 3s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
 
     .info-item img {
