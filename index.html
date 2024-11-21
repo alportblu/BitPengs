@@ -51,15 +51,9 @@
     }
 
     @keyframes move {
-      0% {
-        transform: translateY(0) scale(1);
-      }
-      50% {
-        transform: translateY(-50px) scale(1.5);
-      }
-      100% {
-        transform: translateY(100vh) scale(0.8);
-      }
+      0% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-50px) scale(1.5); }
+      100% { transform: translateY(100vh) scale(0.8); }
     }
 
     /* Conteúdo principal */
@@ -154,17 +148,18 @@
       color: #fff;
     }
 
-    /* About Section (Pergaminho) */
+    /* About Section (Novo pergaminho) */
     #about {
       text-align: center;
-      margin-top: 50px;
-      padding: 40px;
-      background: url('https://www.pngmart.com/files/11/Old-Paper-Background-PNG.png') no-repeat center center;
-      background-size: contain;
-      border-radius: 15px;
-      max-width: 800px;
       margin: 50px auto;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      padding: 40px 20px;
+      background: #f8e9d2;
+      border: 2px solid #c2a77d;
+      border-radius: 10px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      max-width: 800px;
+      background-image: url('https://www.pngmart.com/files/11/Old-Paper-Background-PNG.png'); /* Imagem de pergaminho */
+      background-size: cover;
     }
 
     #about h2 {
@@ -177,7 +172,7 @@
       font-size: 1.5rem;
       line-height: 1.8;
       color: #4b2e1e;
-      font-family: 'Great Vibes', cursive; /* Estilo caligrafia antiga */
+      font-family: 'Great Vibes', cursive;
     }
 
     .info-section {
