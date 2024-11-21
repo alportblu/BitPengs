@@ -100,21 +100,25 @@
     }
 
     .telegram-button {
-      font-size: 4rem;
-      color: #FFFFFF; /* Cor do ícone */
-      border-radius: 50%; /* Deixa o botão redondo */
+      font-size: 3rem; /* Tamanho do ícone */
+      color: #FFFFFF; /* Cor do ícone (avião branco) */
+      background-color: #0088cc; /* Fundo azul oficial do Telegram */
+      border-radius: 50%; /* Torna o botão circular */
       width: 80px;
       height: 80px;
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 auto;
-      transition: background 0.3s ease;
-    }
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona um leve sombreado */
+      transition: background-color 0.3s ease, transform 0.2s ease; /* Animações suaves */
+     }
 
     .telegram-button:hover {
-      background-color: #006699; /* Cor de hover para o botão */
-    }
+      background-color: #006699; /* Muda o azul no hover */
+      transform: scale(1.1); /* Aumenta o tamanho no hover */
+     }
+
 
     .telegram-text {
       font-family: 'Press Start 2P', cursive;
