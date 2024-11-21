@@ -1,150 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BitPengs | Cool Coins for Bold Investors</title>
-    <style>
-        /* General Styles */
-        body {
-            margin: 0;
-            font-family: 'Georgia', serif;
-            background: linear-gradient(to bottom, #e6f7ff, #cce7f0);
-            color: #333;
-        }
-        header {
-            background: #007BFF;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        header p {
-            margin: 0;
-            font-size: 1rem;
-        }
-        .section {
-            padding: 40px 20px;
-            text-align: center;
-        }
-        .section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-        img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
-        .animate {
-            animation: float 4s ease-in-out infinite;
-        }
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-        /* Scroll Animation Styles */
-        .letter-container {
-            position: relative;
-            max-width: 600px;
-            margin: 40px auto;
-            overflow: hidden;
-        }
-        .letter {
-            background: #f8e9d2;
-            border: 2px solid #c2a77d;
-            border-radius: 10px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-            font-family: 'Georgia', serif;
-            font-size: 1.2rem;
-            color: #5a4633;
-            transform: perspective(800px) rotateX(90deg);
-            transform-origin: top;
-            transition: transform 0.6s ease;
-            background-image: url('scroll_background.png'); /* Background for scroll effect */
-            background-size: cover;
-        }
-        .letter.open {
-            transform: perspective(800px) rotateX(0deg);
-        }
-        .letter p {
-            margin: 10px 0;
-        }
-        /* Button Styles */
-        .buy-button {
-            display: inline-block;
-            margin-top: 20px;
-            background: #6d4c41;
-            color: #fff;
-            padding: 15px 30px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: bold;
-            border: 2px solid #3e2723;
-            transition: transform 0.2s, background 0.3s;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            font-family: 'Georgia', serif;
-            text-transform: uppercase;
-        }
-        .buy-button:hover {
-            transform: scale(1.1);
-            background: #3e2723;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bowser Coin</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>BitPengs</h1>
-        <p>Cool Coins for Bold Investors</p>
-    </header>
-    <section class="section">
-        <h2>Welcome to BitPengs</h2>
-        <p>The ultimate crypto journey inspired by penguins' resilience and community spirit. Dive into the frozen seas of opportunity!</p>
-        <img src="banner.png" alt="BitPengs Banner" class="animate">
-    </section>
-    <section class="section">
-        <h2>The Tale of BitPengs</h2>
-        <div class="letter-container">
-            <div class="letter" id="scrolling-letter">
-                <p>Once upon a time, in the icy kingdom of Frosthaven, a community of bold and resilient penguins dreamed of a future where their treasure could unite the world. These penguins were not ordinary—they were visionaries, bringing their golden coin, **BitPengs**, to the blockchain seas.</p>
-                <p>With every BitPeng minted, the penguins shared their story of resilience, teamwork, and prosperity. As the coin grew, so did the flock of believers who saw the potential of this frosty revolution.</p>
-                <p>Today, BitPengs is more than a currency—it's a movement. Join the flock and claim your piece of the frozen treasure. Together, we'll navigate the crypto currents and chart a course to financial success!</p>
-                <p><strong>Will you be part of the story?</strong></p>
-            </div>
-        </div>
-        <a href="https://pump.fun/coin/8Ggo5EK7Z2d5ydnJeSTN4rfBnxswDoUJ21dGDps9pump" class="buy-button">BUY NOW</a>
-    </section>
-    <footer>
-        <p>&copy; 2024 BitPengs. All Rights Reserved.</p>
-    </footer>
-    <style>
-    footer {
-        background: #007BFF;
-        color: white;
-        padding: 20px 0;
-        text-align: center; /* Centraliza o texto */
-    }
-    </style>
-    <script>
-        // JavaScript to handle scroll-triggered animation
-        const letter = document.getElementById('scrolling-letter');
-        window.addEventListener('scroll', () => {
-            const rect = letter.getBoundingClientRect();
-            if (rect.top < window.innerHeight && !letter.classList.contains('open')) {
-                letter.classList.add('open');
-            }
-        });
-    </script>
+  <div class="background"></div>
+  <div class="container">
+    <img src="imagem.png" alt="Bowser Coin" class="main-image">
+    <h1 class="title">Bowser Coin</h1>
+    <p class="subtitle">The King of Blockchain</p>
+    <a href="#about" class="cta-button">Explore the Kingdom</a>
+  </div>
+
+  <div id="about" class="section">
+    <h2>About Bowser Coin</h2>
+    <p>Bowser Coin is built on Solana for lightning-fast transactions and low fees. Join the community and dominate the blockchain world.</p>
+    <img src="imagem2.png" alt="Bowser on Fire" class="section-image">
+  </div>
+
+  <footer>
+    <p>© 2024 Bowser Coin. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
