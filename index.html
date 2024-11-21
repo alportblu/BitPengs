@@ -48,17 +48,18 @@
       background-image: url('castle-door.png');
       background-size: cover;
       background-position: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
       transform-origin: center right;
       animation: door-open 2s forwards;
     }
 
     .door.left {
       transform-origin: center left;
+      background-color: #6a0dad; /* Fallback color if the image fails to load */
     }
 
     .door.right {
       transform-origin: center right;
+      background-color: #4b0082; /* Fallback color if the image fails to load */
     }
 
     @keyframes door-open {
