@@ -83,11 +83,42 @@
       width: 300px;
     }
 
+    .info-section {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 50px;
+    }
+
+    .info-item {
+      text-align: center;
+      margin: 10px;
+      width: 300px;
+    }
+
+    .info-item img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .info-item p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
       background: #000;
       color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .info-item {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -104,6 +135,21 @@
     <h2>About Bowser Coin</h2>
     <p>Bowser Coin is built on Solana for lightning-fast transactions and low fees. Join the community and dominate the blockchain world.</p>
     <img src="imagem2.png" alt="Bowser on Fire" class="section-image">
+
+    <div class="info-section">
+      <div class="info-item">
+        <img src="imagem4.png" alt="Circ Supply">
+        <p>Circ. Supply 1B</p>
+      </div>
+      <div class="info-item">
+        <img src="imagem5.png" alt="Liquidity Burnt">
+        <p>Liquidity BURNT</p>
+      </div>
+      <div class="info-item">
+        <img src="imagem6.png" alt="Network Solana">
+        <p>Network Solana</p>
+      </div>
+    </div>
   </div>
 
   <footer>
