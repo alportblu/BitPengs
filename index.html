@@ -65,6 +65,8 @@
     .main-image {
       width: 300px;
       animation: float 3s ease-in-out infinite;
+      border-radius: 50%; /* Deixa as bordas arredondadas */
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Sombra ao redor */
     }
 
     @keyframes float {
@@ -123,8 +125,6 @@
 
     .telegram-button {
       font-size: 3rem;
-      color: #FFFFFF;
-      background-color: #0088cc;
       border-radius: 50%;
       width: 80px;
       height: 80px;
@@ -132,13 +132,6 @@
       align-items: center;
       justify-content: center;
       margin: 0 auto;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    .telegram-button:hover {
-      background-color: #006699;
-      transform: scale(1.1);
     }
 
     .telegram-text {
@@ -148,30 +141,29 @@
       color: #fff;
     }
 
-    /* About Section (Novo pergaminho) */
+    /* About Section (Pergaminho ajustado) */
     #about {
       text-align: center;
       margin: 50px auto;
       padding: 40px 20px;
-      background: #f8e9d2;
+      background: linear-gradient(120deg, #6a0dad, #4b0082); /* Cor igual ao fundo do site */
       border: 2px solid #c2a77d;
       border-radius: 10px;
       box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
       max-width: 800px;
-      background-image: url('https://www.pngmart.com/files/11/Old-Paper-Background-PNG.png'); /* Imagem de pergaminho */
-      background-size: cover;
+      background-image: none; /* Remove imagem e mantém a cor */
     }
 
     #about h2 {
       font-size: 2.5rem;
-      color: #4b2e1e;
+      color: #fff; /* Altera para branco */
       font-family: 'Cinzel', serif;
     }
 
     #about p {
       font-size: 1.5rem;
       line-height: 1.8;
-      color: #4b2e1e;
+      color: #fff; /* Altera para branco */
       font-family: 'Great Vibes', cursive;
     }
 
